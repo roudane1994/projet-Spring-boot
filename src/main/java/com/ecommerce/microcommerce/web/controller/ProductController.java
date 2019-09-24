@@ -118,6 +118,12 @@ public class ProductController {
     	return map;
     	
     }
+    @GetMapping(value="/listProduitTrie")
+    public List<Product> trierProduitsParOrdre(){
+    	
+    	
+    	return productDao.findByOrderByNomAsc();
+    }
 
 
 
