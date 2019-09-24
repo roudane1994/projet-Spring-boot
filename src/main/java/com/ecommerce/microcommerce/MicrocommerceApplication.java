@@ -24,11 +24,11 @@ public class MicrocommerceApplication  {
 	
 	@Bean
 	public CommandLineRunner start(ProductDao productDao) {
-		
+		 productDao.deleteAll();
 		return args->{
-			Product p1=new Product(1,"Ordinateur portable'", 250, 170);
-			Product p2=new Product(1,"Aspirateur Robot", 750, 560);
-			Product p3=new Product(1,"'Table de Ping Pong", 1050,450);
+			Product p1=new Product(1,"Ordinateur portable", 250, 170);
+			Product p2=new Product(2,"Aspirateur Robot", 750, 560);
+			Product p3=new Product(3,"Table de Ping Pong", 1050,450);
 			productDao.save(p1);
 			productDao.save(p2);
 			productDao.save(p3);
